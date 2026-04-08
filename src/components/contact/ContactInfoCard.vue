@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import {ContactRound, MailPlus, Phone, MapPinned} from "lucide-vue-next";
-import type {ContactInfo} from '@/types/contact'
-import {contactInfoCardLabel} from "@/data/contact.ts";
+import { ContactRound, MailPlus, Phone, MapPinned } from 'lucide-vue-next'
+import type { ContactInfo } from '@/types/contact'
+import { contactInfoCardLabel } from '@/data/contact'
 
 defineProps<{
   contactInfo: ContactInfo
@@ -15,7 +15,7 @@ defineProps<{
     <div class="info-grid">
       <div class="info-item">
         <div class="info-icon">
-          <ContactRound :size="24" :stroke-width="2"/>
+          <ContactRound :size="24" :stroke-width="2" />
         </div>
         <div>
           <p class="info-label">{{ contactInfoCardLabel.nameLabel }}</p>
@@ -25,10 +25,10 @@ defineProps<{
 
       <div class="info-item">
         <div class="info-icon">
-          <MailPlus :size="24" :stroke-width="2"/>
+          <MailPlus :size="24" :stroke-width="2" />
         </div>
         <div>
-          <p class="info-label"> {{ contactInfoCardLabel.emailLabel }} </p>
+          <p class="info-label">{{ contactInfoCardLabel.emailLabel }}</p>
           <a :href="`mailto:${contactInfo.email}`" class="info-value link">
             {{ contactInfo.email }}
           </a>
@@ -37,7 +37,7 @@ defineProps<{
 
       <div class="info-item">
         <div class="info-icon">
-          <Phone :size="24" :stroke-width="2"/>
+          <Phone :size="24" :stroke-width="2" />
         </div>
         <div>
           <p class="info-label">{{ contactInfoCardLabel.phoneLabel }}</p>
@@ -49,7 +49,7 @@ defineProps<{
 
       <div class="info-item">
         <div class="info-icon">
-          <MapPinned :size="24" :stroke-width="2"/>
+          <MapPinned :size="24" :stroke-width="2" />
         </div>
         <div>
           <p class="info-label">{{ contactInfoCardLabel.locationLabel }}</p>
@@ -88,7 +88,8 @@ defineProps<{
 }
 
 @keyframes title-shimmer {
-  0%, 100% {
+  0%,
+  100% {
     background-position: 0 center;
   }
   50% {

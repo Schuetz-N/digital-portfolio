@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import type {SocialLink} from '@/types/contact'
+import type { SocialLink } from '@/types/contact'
 import SocialIcon from '@/components/contact/SocialIcon.vue'
-import {socialMediaCardLabel} from "@/data/contact.ts";
+import { socialMediaCardLabel } from '@/data/contact'
 
 defineProps<{
   socialLinks: SocialLink[]
@@ -26,16 +26,23 @@ defineProps<{
         class="social-link"
         :class="link.icon"
       >
-        <SocialIcon :icon="link.icon"/>
+        <SocialIcon :icon="link.icon" />
         <span class="social-name">{{ link.name }}</span>
       </a>
     </div>
 
     <a :href="`mailto:${email}`" class="cta-button">
-      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-           stroke-width="2">
+      <svg
+        width="20"
+        height="20"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+      >
         <path
-          d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+          d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"
+        ></path>
         <polyline points="22,6 12,13 2,6"></polyline>
       </svg>
       {{ socialMediaCardLabel.buttonLabel }}

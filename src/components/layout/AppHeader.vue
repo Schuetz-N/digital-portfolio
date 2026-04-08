@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import {ref, onMounted, onUnmounted} from 'vue'
-import {useRoute} from 'vue-router'
-import * as HeaderData from "@/data/header.ts";
+import { ref, onMounted, onUnmounted } from 'vue'
+import { useRoute } from 'vue-router'
+import * as HeaderData from '@/data/header'
 
 const route = useRoute()
 const isScrolled = ref(false)
@@ -132,7 +132,8 @@ const isActive = (name: string) => route.name === name
 }
 
 @keyframes logo-glow {
-  0%, 100% {
+  0%,
+  100% {
     filter: drop-shadow(0 0 6px rgba(59, 130, 246, 0.3));
   }
   50% {

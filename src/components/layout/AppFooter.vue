@@ -1,11 +1,11 @@
 <script setup lang="ts">
-import {socialLinks} from "@/data/contact.ts";
-import {footerLabel} from "@/data/footer.ts";
+import { socialLinks } from '@/data/contact'
+import { footerLabel } from '@/data/footer'
 
 const currentYear = new Date().getFullYear()
 
 const getLink = (name: string) => {
-  return socialLinks.find(link => link.name === name)?.url || '#'
+  return socialLinks.find((link) => link.name === name)?.url || '#'
 }
 </script>
 
@@ -17,8 +17,12 @@ const getLink = (name: string) => {
         <a :href="getLink('GitHub')" target="_blank" rel="noopener noreferrer" class="footer-link">
           {{ footerLabel.linkOne }}
         </a>
-        <a :href="getLink('LinkedIn')" target="_blank" rel="noopener noreferrer"
-           class="footer-link">
+        <a
+          :href="getLink('LinkedIn')"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="footer-link"
+        >
           {{ footerLabel.linkTwo }}
         </a>
         <a :href="getLink('YouTube')" target="_blank" rel="noopener noreferrer" class="footer-link">

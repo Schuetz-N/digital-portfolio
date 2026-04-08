@@ -1,8 +1,8 @@
 <script setup lang="ts">
-import {ref} from 'vue'
-import ContactInfoCard from "@/components/contact/ContactInfoCard.vue";
-import SocialMediaCard from "@/components/contact/SocialMediaCard.vue";
-import {contactInfo, socialLinks} from "@/data/contact.ts";
+import { ref } from 'vue'
+import ContactInfoCard from '@/components/contact/ContactInfoCard.vue'
+import SocialMediaCard from '@/components/contact/SocialMediaCard.vue'
+import { contactInfo, socialLinks } from '@/data/contact'
 
 const isVisible = ref(true)
 </script>
@@ -17,11 +17,11 @@ const isVisible = ref(true)
 
       <div class="contact-content">
         <div :class="{ visible: isVisible }" :style="{ transitionDelay: '100ms' }">
-          <ContactInfoCard :contact-info="contactInfo"/>
+          <ContactInfoCard :contact-info="contactInfo" />
         </div>
 
         <div :class="{ visible: isVisible }" :style="{ transitionDelay: '200ms' }">
-          <SocialMediaCard :social-links="socialLinks" :email="contactInfo.email"/>
+          <SocialMediaCard :social-links="socialLinks" :email="contactInfo.email" />
         </div>
       </div>
     </div>
@@ -61,7 +61,8 @@ const isVisible = ref(true)
 }
 
 @keyframes gradient-shift {
-  0%, 100% {
+  0%,
+  100% {
     background-position: 0 center;
   }
   50% {
@@ -88,7 +89,8 @@ const isVisible = ref(true)
 }
 
 @keyframes subtle-fade {
-  0%, 100% {
+  0%,
+  100% {
     opacity: 0.7;
   }
   50% {
